@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+        <link rel="stylesheet" type="text/css" href="css/notes.css" />
+        <title>Notes</title>
+    </head>
+    <body>
+        <div class="header">
+          <h1>Note's App</h1>
+          <h2 id="mode"></h2>
+        </div>
+
+          <div class="notes-list-container">
+            <div class="notes-list" id="notes-list">
+
+            </div>
+            <button class="add" id="add">Add</button>
+          </div>
+
+          <div class="note-editor" id="note-editor" ><!--Aquí creamos las notas-->
+            <input class="title" type="text" name="title" id="title" placeholder="Title" required />
+            <br >
+            <textarea class="comment" name="comment" id="comment" placeholder="Add Comment"></textarea>
+            <br>
+            <p>Expiration Date: <input class="date" type="date" name="date" id="date" /></p>
+            <br>
+            <button class="save" id="save">Save</button>
+            </div>
+
+          <script type="text/javascript" src="cordova.js"></script>
+          <script type="text/javascript" src="js/fastclick.js"></script>
+          <script type="text/javascript" src="js/notes.js"></script>
+
+        <footer class="footer">
+          <h4>Developing Apps.</h4>
+        </footer>
+    </body>
+</html>
