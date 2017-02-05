@@ -1,41 +1,40 @@
 <!DOCTYPE html>
 <html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+        <link rel="stylesheet" type="text/css" href="css/notes.css" />
+        <title>Notes</title>
+    </head>
+    <body>
+        <div class="header">
+          <h1>Note's App</h1>
+        </div>
 
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width" />
-  <link rel="stylesheet" type="text/css" href="css/notesM.css" />
-  <title>Notas</title>
-</head>
+          <div class="notes-list-container">
+            <div class="notes-list" id="notes-list">
 
-<body>
-  <div class="header">
-    <h1>Aplicación de notas</h1>
-  </div>
+            </div>
+            <button class="add" id="add">Add</button>
+          </div>
 
-  <div class="notes-list-container">
-    <div class="notes-list" id="notes-list">
-      
-    </div>
-    <button class="anadir" id="anadir">Añadir</button>
-  </div>
-    
-  <div class="note-editor" id="note-editor">
-    <input class="titulo" type="text" name="titulo" id="titulo" placeholder="Titulo" required />
-    <br>
-    <textarea class="comentario" name="comentario" id="comentario" placeholder="Añadir comentario"></textarea>
-    <br>
-    <button class="salvar" id="salvar">Salvar</button>
-  </div>
+          <div class="note-editor" id="note-editor" ><!--Aquí creamos las notas-->
+            <input class="title" type="text" name="title" id="title" placeholder="Title" required />
+            <br >
+            <textarea class="comment" name="comment" id="comment" placeholder="Add Comment"></textarea>
+            <br>
+          <!--  <p>Expiration Date: <input class="date" type="date" name="date" id="date" /></p>
+            <br>-->
+            <button class="save" id="save">Save</button>
+            </div>
 
-  <script type="text/javascript" src="cordova.js"></script>
-  <script type="text/javascript" src="js/fastclick.js"></script>
-  <script type="text/javascript" src="js/firebase.js"></script>
-  <script type="text/javascript" src="js/notesM.js"></script>
-        
-  <footer class="footer">
-    <h4>Creando Apps. Aprende a programar aplicaciones móviles.</h4>
-  </footer>
-</body>
+          <script type="text/javascript" src="cordova.js"></script>
+          <script type="text/javascript" src="js/fastclick.js"></script>
+    <!--      <script type="text/javascript" src="js/firebase.js"></script>-->
+          <script type="text/javascript" src="js/notes.js"></script>
 
+        <footer class="footer">
+          <h4>Developing Apps.</h4>
+        </footer>
+    </body>
 </html>
