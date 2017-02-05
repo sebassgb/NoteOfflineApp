@@ -1,9 +1,7 @@
 var app={
 
 	model:{
-		"notes":[
-
-		]
+		"notes":[{"title": "Note Trial ", "content": "Oferta en la panaderia de la esquina"}]
 		//{"title":"Comprar pan","content":"Oferta en la panaderia de la esquina"}
 	},//Iniciamos modelo con la primera nota
 
@@ -65,8 +63,8 @@ var app={
 	},
 //PARA ALMACENAR EN EL DISPOSITIVO
 	storageData: function(){//Solicitamos a ordova un Storage
-		window.resolveLocalFileSystemURL(cordova.file.externalApplicationStorageDirectory, this.gotFS, this.fail);
-	},
+	window.resolveLocalFileSystemURL(cordova.file.externalApplicationStorageDirectory, this.gotFS, this.fail);
+},
 
 	gotFS: function(fileSystem){//En el callbackpedimos fichero en el que estamos
 		fileSystem.getFile("files/"+"model.json", {create: true, exclusive: false}, app.gotFileEntry, app.fail);
@@ -88,7 +86,7 @@ var app={
 	},
 
 	getFS: function(fileSystem){
-		fileSystem.getFile("files/"+"model.json", null, app.getFileEntry, app.fail);
+		fileSystem.getFile("files/"+"model.json", null, app.getFileEntry, app.noFile);
 	},
 
 	getFileEntry: function(fileEntry){
@@ -103,6 +101,10 @@ var app={
 			app.init();
 		};
 		reader.readAsText(file);
+	},
+
+	noFile: function(error) {//En caso de no encontrar archivo
+		app.init();
 	},
 
 	fail: function(error){
